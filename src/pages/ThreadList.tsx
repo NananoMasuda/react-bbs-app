@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import BASE_URL from "../config";
 import "../styles/ThreadList.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Thread = {
   id: number;
@@ -61,6 +61,11 @@ const ThreadList: React.FC = () => {
     setOffset((prevOffset) => prevOffset + 10);
   };
 
+  const navigate = useNavigate();
+  const handleCardClick = (threadId: number) => {
+    navigate(`/threads/${threadId}`);
+  };
+
   return (
     <Container className="thread-list-container">
       {location.state?.message && (
@@ -98,7 +103,11 @@ const ThreadList: React.FC = () => {
             display="flex"
             flexDirection="column"
           >
-            <Card className="thread-card">
+            <Card
+              className="thread-card"
+              onClick={() => handleCardClick(thread.id)}
+              style={{ cursor: "pointer" }}
+            >
               <CardContent>
                 <Typography variant="h6" gutterBottom>
                   {thread.title}

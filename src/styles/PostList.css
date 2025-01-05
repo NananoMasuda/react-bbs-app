@@ -1,0 +1,19 @@
+/* PostList.css */
+.post-list-container {
+    padding: 16px;
+  }
+  
+  .post-card {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+  
