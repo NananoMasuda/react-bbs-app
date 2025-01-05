@@ -1,0 +1,18 @@
+/* ThreadList.css */
+
+/* コンテナ全体のスタイル */
+.thread-list-container {
+  margin-top: 20px;
+}
+
+/* カードのスタイル */
+.thread-card {
+  height: 100%;
+  background-color: #b5d8f0e6 !important;
+}
+
+/* ロードボタンの配置 */
+.load-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
